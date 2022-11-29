@@ -1,7 +1,6 @@
 <?php
 
 
-
 GeneraPassword();
 function GeneraPassword()
 {
@@ -38,7 +37,7 @@ function GeneraPassword()
     <div>
         <form action="index.php" method="get">
             <p>
-                <?php echo $psw ?>
+                <?php echo GeneraPassword() ?>
             </p>
             <input type="number" id="psw" name="password">
             <button type="submit">Genera la tua password</button>
