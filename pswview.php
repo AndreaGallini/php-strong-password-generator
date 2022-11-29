@@ -15,7 +15,7 @@ include __DIR__ . '/functions/functions.php';
 
 <body>
     <p>
-        <?php ?>
+        <?php echo GeneraPassword(); ?>
     </p>
 </body>
 
