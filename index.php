@@ -7,16 +7,20 @@ function GeneraPassword()
 {
     $alfabetoMinuscolo = "abcdefghilmnopqestuvz";
     $alfabetoMaiuscolo = strtoupper($alfabetoMinuscolo);
-    $numeri = 1234567890;
+    $numeri = '1234567890';
     $simboli = "!£$%&/()=?^";
+    $mainFile = $alfabetoMinuscolo . $alfabetoMaiuscolo . $numeri . $simboli;
     $lunghezzaPsw = $_GET["password"];
     echo $lunghezzaPsw;
 
     for ($i = 0; $i < $lunghezzaPsw; $i++) {
 
-        echo substr($alfabetoMinuscolo, 1, $i);
+        $psw = substr($mainFile, rand(1, strlen($mainFile)), 1);
+        echo $psw;
+
 
     }
+    return $psw;
 }
 ;
 ?>
@@ -33,7 +37,9 @@ function GeneraPassword()
 <body>
     <div>
         <form action="index.php" method="get">
-
+            <p>
+                <?php echo $psw ?>
+            </p>
             <input type="number" id="psw" name="password">
             <button type="submit">Genera la tua password</button>
         </form>
