@@ -11,11 +11,10 @@ function GeneraPassword()
     $simboli = "!£$%&/()=?^";
     $lunghezzaPsw = $_GET["password"];
     echo $lunghezzaPsw;
-    $counter = 0;
+
     for ($i = 0; $i < $lunghezzaPsw; $i++) {
 
-        echo substr($alfabetoMinuscolo, 1, $counter);
-        $counter++;
+        echo substr($alfabetoMinuscolo, 1, $i);
 
     }
 }
