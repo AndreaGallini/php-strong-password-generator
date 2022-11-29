@@ -1,10 +1,7 @@
 <?php
-
+session_start();
 include __DIR__ . '/functions/functions.php';
-if (isset($_GET['password'])) {
-    GeneraPassword();
-}
-;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,13 +14,9 @@ if (isset($_GET['password'])) {
 </head>
 
 <body>
-    <div>
-        <form action="index.php" method="get">
-
-            <input type="number" id="psw" name="password">
-            <button type="submit">Genera la tua password</button>
-        </form>
-    </div>
+    <p>
+        <?php echo $_SESSION['psw'] ?>
+    </p>
 </body>
 
 </html>
