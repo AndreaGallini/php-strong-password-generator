@@ -20,7 +20,7 @@ function GeneraPassword()
     if (!empty($psw)) {
         session_start();
         $_SESSION['psw'] = $psw;
-        header('Location ./pswview.php');
+        header('Location pswview.php');
     }
 
 

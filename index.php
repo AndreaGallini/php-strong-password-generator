@@ -19,7 +19,9 @@ if (isset($_GET['password'])) {
 <body>
     <div>
         <form action="index.php" method="get">
-
+            <p>
+                <?php echo GeneraPassword(); ?>
+            </p>
             <input type="number" id="psw" name="password">
             <button type="submit">Genera la tua password</button>
         </form>
