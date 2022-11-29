@@ -2,7 +2,6 @@
 
 include __DIR__ . '/functions/functions.php';
 if (isset($_GET['password'])) {
-    GeneraPassword();
 }
 ;
 ?>

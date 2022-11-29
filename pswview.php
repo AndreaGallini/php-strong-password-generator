@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include __DIR__ . '/functions/functions.php';
 
 ?>
@@ -15,7 +15,7 @@ include __DIR__ . '/functions/functions.php';
 
 <body>
     <p>
-        <?php echo $_SESSION['psw'] ?>
+        <?php ?>
     </p>
 </body>
 
