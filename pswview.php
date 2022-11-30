@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include __DIR__ . '/functions/functions.php';
 
 ?>
@@ -17,7 +17,7 @@ include __DIR__ . '/functions/functions.php';
 <body class="container">
     <h2>La tua Password :</h2>
     <p>
-        <?php echo GeneraPassword(); ?>
+        <?php echo $_SESSION['pass'] ?>
     </p>
 
 </body>
